@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+ 		<title>Devito Survey</title>
+  		<link rel="stylesheet" href="/static/css/style.css">
+		<script type="text/javascript" src="../static/js/rotate.js"></script>
+
+	</head>
+	<div class="vert-container">
+		<h2>Has Danny Devito ever won an Emmy?</h2>
+
+		<p>You answered: {{survey_answer}}</p>
+		<p>The correct answer: Yes</p>
+		{% if correct == True %}
+		<img id="awardWinner" src="../static/img/AwardWinner.jpeg" alt="Emmy Award Winner Danny Devito" width="500" height="600">
+		{% endif %}
+		<p>Return back to the homepage: <button id="returnButton" onclick="returnHome()">Homepage</button></p>
+
+		
+	</div>
+</html>

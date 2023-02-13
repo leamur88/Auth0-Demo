@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../static/css/style.css">
+		<title>Danny DeVito Fan Club!</title>
+		<script type="text/javascript" src="../static/js/rotate.js"></script>
+	</head>
+	<body onload="onload()">
+		<div class="vert-container">
+			{% if user != "unknown" %}			
+			<h1>Welcome {{user}} to the Danny DeVito Fan Club!</h1>
+			<img id="rotateDanny" src="../static/img/OGDanny.jpg" alt="Our lord and savior" width="500" height="600">
+			<button type="button" onclick="rotate()">Click Me!</button>
+			<p>This is meant to be a safe space for all true Danny Devito lovers. Listed below is a transcription of the greatest ever scene in Danny Devito history:</p>
+			<p class="mantra">You gotta pay the troll toll to get into this boy's hole. You gotta pay the troll toll to get in. You want this baby boy's hole, you gotta pay the troll toll.</p>
+
+			<p>Try an optional quiz! <button id="surveyButton" onclick="goToSurvey()">Quiz!</button></p>
+
+			<h2>Fan Club Members</h2>
+			<div class="horiz-container">
+				<label for="name">Join the Club: </label>
+				<input type="text" id="name" name="name">
+				<button type="button" onclick="addMember()">Join!</button>
+			</div>
+			<ul id="Club Members">
+			</ul>
+			{% else %}
+			<div>
+				<h2>Unfortunately you are not allowed into the Danny Devito Fan Club</h2>
+				<p>Please return back to the homepage to be let in: <button id="returnButton" onclick="returnHome()">Homepage</button></p>
+			</div>
+			{% endif %}
+			
+		</div>
+	</body>
+</html>
